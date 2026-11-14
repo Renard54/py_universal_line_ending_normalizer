@@ -54,3 +54,10 @@ is reported as CRLF.  That is deliberate: detection is a hint, not a
 validation.  If you need to know whether a string is internally
 consistent, compare `detect_line_ending` against the endings in
 `split_lines` output yourself.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
