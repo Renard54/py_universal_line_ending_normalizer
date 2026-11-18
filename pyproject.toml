@@ -1,6 +1,6 @@
 [project]
 name = "py-universal-line-ending-normalizer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Finds and replaces CR, LF, CRLF, and U+2028 line breaks in strings."
 requires-python = ">=3.10"
 dependencies = []
